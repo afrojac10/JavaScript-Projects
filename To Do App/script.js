@@ -1,13 +1,21 @@
+
+
 const   GETTEXT = document.querySelector("textarea");
-//const GETBUTTON = document.querySelector("button");
+const TEXTCONTAINER = document.querySelector(".newNotes");
+const BUTTON = document.querySelector(".addNotes");
+BUTTON.addEventListener("click" , grabText);
 
 function grabText(){
-    var me = GETTEXT.value;
-    document.querySelector(".text").innerHTML = me;
+    var noteInputs = GETTEXT.value;
+    var containerOfText = document.createElement("li");
+    var textNotesInputs = document.createTextNode(noteInputs);
+    containerOfText.appendChild(textNotesInputs);
+    TEXTCONTAINER.appendChild(containerOfText);
     GETTEXT.value = null;
-    // console.log(me);
-}
 
+    // console.log(containerOfText);
+}
+// console.log(BUTTON);
 
 
 
