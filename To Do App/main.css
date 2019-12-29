@@ -48,13 +48,13 @@ h2{
 }
 
 .newNotes li{
-    padding:5rem;
+    padding:1.5rem;
     margin: 15px;
     font-size: 20px;
     border: 2px solid crimson;
     border-width: 5px;
     border-radius: 10px;
-    width: 50%;
+    width: auto;
 }
 
 
