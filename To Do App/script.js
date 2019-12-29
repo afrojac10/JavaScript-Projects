@@ -6,14 +6,21 @@ const BUTTON = document.querySelector(".addNotes");
 BUTTON.addEventListener("click" , grabText);
 
 function grabText(){
+    
     var noteInputs = GETTEXT.value;
-    var containerOfText = document.createElement("li");
-    var textNotesInputs = document.createTextNode(noteInputs);
-    containerOfText.appendChild(textNotesInputs);
-    TEXTCONTAINER.appendChild(containerOfText);
-    GETTEXT.value = null;
+    if (noteInputs == null ){
+        var containerOfText = document.createElement("li");
+        var textNotesInputs = document.createTextNode(noteInputs);
+        containerOfText.appendChild(textNotesInputs);
+        TEXTCONTAINER.appendChild(containerOfText);
+        GETTEXT.value = null;
 
     // console.log(containerOfText);
+    }else{
+        console.log("Please fill In!");
+    }
+    
+    
 }
 // console.log(BUTTON);
 

@@ -30,7 +30,7 @@ li{
 }
 
 .btn{
-    padding: 9px;
+    padding: 8px 20px;
     border: none;
     border-radius: 5px;
     background-color: crimson;
@@ -47,6 +47,10 @@ h2{
     margin: 10px;
 }
 
+.newNotes{
+    justify-content: center;
+}
+
 .newNotes li{
     padding:30px 50px;
     margin: 15px;
@@ -54,14 +58,18 @@ h2{
     border: 2px solid crimson;
     border-width: 5px;
     border-radius: 10px;
-    width: 100% !important;
+    width: 90% !important;
 }
 
 
-@media screen and (max-width:375px){
+@media screen and (max-width:500px){
     .doButton{
-        left: 15.5em;
+        left: 17.5em;
     }
 
-    
+    .newNotes li{
+        padding: 29px 18px;
+        width: 90% ! important;
+    }
+
 }
