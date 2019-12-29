@@ -8,7 +8,7 @@ BUTTON.addEventListener("click" , grabText);
 function grabText(){
     
     var noteInputs = GETTEXT.value;
-    if (noteInputs == null ){
+    if (noteInputs !== "" && noteInputs !== " " ){
         var containerOfText = document.createElement("li");
         var textNotesInputs = document.createTextNode(noteInputs);
         containerOfText.appendChild(textNotesInputs);
