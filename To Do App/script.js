@@ -7,8 +7,9 @@ const   HEADER = document.querySelector(".addedText");
 const   HEADERINPUT = document.querySelector("#header");
 
 BUTTON.addEventListener("click" , grabText);
-BUTTON.addEventListener("click" , grabHeader);
+// BTTON.addEventListener("click" , grabHeader);
 
+// function joint(a){var b;return b=a[a.length-1],a.pop(),a=a.length>1?joint(a):a[0],function(){b.apply(new a)}}
 
 function grabText(){
     
@@ -50,6 +51,8 @@ function grabHeader(){
     }
     
 }
+
+grabText = joint([grabText, grabHeader]);
 
 // console.log(BUTTON);
 
