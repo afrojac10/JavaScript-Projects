@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Modern To Do App</title>
     <link rel="stylesheet" href="main.css">
-
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Girassol|Lobster&display=swap" rel="stylesheet">
     
 </head>
 <body>
@@ -14,20 +14,27 @@
         <h1 class="appName">to do app</h1>
     </header>
 
-    <section class="textArea">
-        <textarea name="" id="writeText" cols="30" rows="10" placeholder=" Enter Your Notes Here"></textarea>
-        <div class="doButton">
-            <button type="button" class="addNotes btn">Add Note</button>
-        </div>
-    </section>
+    <div class="noteBlock">
+        <section class="header">
+            <label class="noteHeader">Title ~ </label>
+            <input type="text" name="" id="header" placeholder="Enter Note Heading">
+        </section>
+
+        <section class="textArea">
+            <textarea name="" id="writeText" cols="30" rows="10" placeholder=" Enter Your Notes Here"></textarea>
+            <div class="doButton">
+                <button type="button" class="addNotes btn">Add Note</button>
+            </div>
+        </section>
+    </div>
 
     <section class="addedNotes design">
         <h2>Recently Added</h2>
     </section>
-
-    <ul class="newNotes">
+    <section class="addedText"></section>
+        <ul class="newNotes">
         
-    </ul>
+        </ul>
     <script src="script.js"></script>
 </body>
 </html>

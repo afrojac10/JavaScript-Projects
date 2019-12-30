@@ -3,16 +3,19 @@
     padding: 0;
     margin: 0;
     box-sizing:border-box;
+    background-color: tomato;
 }
 
 h1{
     text-align: center;
     text-transform: capitalize;
     padding: 35px; 
+    font-family: 'Girassol', cursive;
 }
 
 li{
     list-style: none;
+    font-family: 'Crimson Text', serif;
 }
 
 .textArea{
@@ -63,15 +66,67 @@ h2{
     width: 90% !important;
 }
 
+.noteBlock{
+    border: 2px solid cyan;
+}
+
+.header{
+    margin: 30px;
+    font-size: 23.5px;
+    font-weight: bolder;
+}
+
+.noteHeader{
+    position: relative;
+    right: 20px;
+    font-family: 'Lobster', cursive;
+    letter-spacing: 3px;
+}
+
+input{
+    border: none;
+    padding: 29px 20px;
+    background-color:teal;
+    color: #fff;
+    outline: none;
+    border-radius: 8px;
+}
+
+::-webkit-input-placeholder{
+    color: wheat;
+}
+
+.placeHolderColorChange::-webkit-input-placeholder{
+    color: wheat;
+    font-weight: bolder;
+}
+
+h2{
+    /* text-align: center; */
+    text-transform: capitalize;
+    padding: 15px; 
+    font-family: 'Girassol', cursive;
+    text-decoration: underline;
+}
 
 @media screen and (max-width:500px){
     .doButton{
-        left: 17.5em;
+        left: 16em;
     }
 
     .newNotes li{
         padding: 29px 18px;
         width: 90% ! important;
+    }
+
+    .noteBlock{
+        border: 2px groove teal;
+        margin: 15px;
+        border-radius: 10px;
+        padding: 40px 0;
+    }
+    .btn{
+        padding: 10px;
     }
 
 }
