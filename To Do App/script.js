@@ -35,7 +35,7 @@ function grabText(){
 function grabHeader(){
     var noteHeader = HEADERINPUT.value;
     if (noteHeader !== "" && noteHeader !== " " ){
-        var containerOfHeader = document.createElement("h2");
+        var containerOfHeader = document.createElement("h3");
         var headerText = document.createTextNode(noteHeader);
         containerOfHeader.appendChild(headerText);
         HEADER.appendChild(containerOfHeader);
