@@ -29,12 +29,8 @@ function grabText(){
         // GETTEXT.classList.add('placeHolderColorChange');
     }
 
-}
 
-
-
-function grabHeader(){
-    var noteHeader = HEADERINPUT.value;
+   var noteHeader = HEADERINPUT.value;
     if (noteHeader !== "" && noteHeader !== " " ){
         var containerOfHeader = document.createElement("h3");
         var headerText = document.createTextNode(noteHeader);
@@ -49,6 +45,27 @@ function grabHeader(){
         HEADERINPUT.placeholder = "Fill In A Value";
         HEADERINPUT.classList.add('placeHolderColorChange');
     }
+
+}
+
+
+
+// function grabHeader(){
+    // var noteHeader = HEADERINPUT.value;
+    // if (noteHeader !== "" && noteHeader !== " " ){
+    //     var containerOfHeader = document.createElement("h3");
+    //     var headerText = document.createTextNode(noteHeader);
+    //     containerOfHeader.appendChild(headerText);
+    //     HEADER.appendChild(containerOfHeader);
+    //     HEADERINPUT.value = null;
+
+    
+    // console.log(HEADER);
+    // }else{
+    //     console.log("Please fill In!");
+    //     HEADERINPUT.placeholder = "Fill In A Value";
+    //     HEADERINPUT.classList.add('placeHolderColorChange');
+    // }
     
 }
 
