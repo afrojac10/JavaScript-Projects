@@ -8,7 +8,6 @@ const   HEADERINPUT = document.querySelector("#header");
 
 BUTTON.addEventListener("click" , grabHeader)
 BUTTON.addEventListener("click" , grabText);
-// BUTTON.addEventListener("click" , grabHeader);
 
 // function joint(a){var b;return b=a[a.length-1],a.pop(),a=a.length>1?joint(a):a[0],function(){b.apply(new a)}}
 
@@ -60,44 +59,6 @@ function grabText(){
 
 
 
-// function grabHeader(){
-//     var noteHeader = HEADERINPUT.value;
-//     if (noteHeader !== "" && noteHeader !== " " ){
-//         var containerOfHeader = document.createElement("h3");
-//         var headerText = document.createTextNode(noteHeader);
-//         containerOfHeader.appendChild(headerText);
-//         HEADER.appendChild(containerOfHeader);
-//         HEADERINPUT.value = null;
-
-    
-//     console.log(HEADER);
-//     }else{
-//         console.log("Please fill In!");
-//         HEADERINPUT.placeholder = "Fill In A Value";
-//         HEADERINPUT.classList.add('placeHolderColorChange');
-//     }
-    
-// }
-
-
-// function grabHeader(){
-//     var noteHeader = HEADERINPUT.value;
-//     if (noteHeader !== "" && noteHeader !== " " ){
-//         var containerOfHeader = document.createElement("h3");
-//         var headerText = document.createTextNode(noteHeader);
-//         containerOfHeader.appendChild(headerText);
-//         TEXTCONTAINER.appendChild(containerOfHeader);
-//         HEADERINPUT.value = null;
-
-    
-//     console.log(HEADER);
-//     }else{
-//         console.log("Please fill In!");
-//         HEADERINPUT.placeholder = "Fill In A Value";
-//         HEADERINPUT.classList.add('placeHolderColorChange');
-//     }
-    
-// }
 
 // grabText = joint([grabText, grabHeader]);
 
