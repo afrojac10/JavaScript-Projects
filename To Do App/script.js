@@ -6,8 +6,10 @@ const BUTTON = document.querySelector(".addNotes");
 const   HEADER = document.querySelector(".addedText");
 const   HEADERINPUT = document.querySelector("#header");
 
+BUTTON.addEventListener("click" , checkEmptyField);
 BUTTON.addEventListener("click" , grabHeader)
 BUTTON.addEventListener("click" , grabText);
+// BUTTON.addEventListener("click" , checkEmptyField);
 
 // function joint(a){var b;return b=a[a.length-1],a.pop(),a=a.length>1?joint(a):a[0],function(){b.apply(new a)}}
 
@@ -22,8 +24,6 @@ function grabHeader(){
         TEXTCONTAINER.appendChild(containerOfHeader);
         HEADERINPUT.value = null;
 
-    
-    console.log(HEADER);
     }else{
         console.log("Please fill In!");
         HEADERINPUT.placeholder = "Fill In A Value";
@@ -31,9 +31,6 @@ function grabHeader(){
     }
     
 }
-
-
-
 
 
 
@@ -46,8 +43,7 @@ function grabText(){
         containerOfText.appendChild(textNotesInputs);
         TEXTCONTAINER.appendChild(containerOfText);
         GETTEXT.value = null;
-
-    console.log(containerOfText);
+        
     }else{
         console.log("Please fill In!");
         GETTEXT.style.borderColor = "crimson";
@@ -57,9 +53,18 @@ function grabText(){
 
 }
 
+function checkEmptyField(){
+    const noteHeader = HEADERINPUT.value;
+    const noteInputs = GETTEXT.value;
+    if (noteHeader === "" && noteHeader === " "  && noteInputs === "" && noteInputs === " " ){
+        console.log("Hi");
+    }else{
+        console.log("J");
+    }
 
+}
 
-
+checkEmptyField();
 // grabText = joint([grabText, grabHeader]);
 
 // console.log(BUTTON);
