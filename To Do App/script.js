@@ -6,9 +6,9 @@ const BUTTON = document.querySelector(".addNotes");
 const   HEADER = document.querySelector(".addedText");
 const   HEADERINPUT = document.querySelector("#header");
 
-BUTTON.addEventListener("click" , checkEmptyField);
-BUTTON.addEventListener("click" , grabHeader)
-BUTTON.addEventListener("click" , grabText);
+BUTTON.addEventListener("click" , checkEmptyField , grabHeader ,grabText );
+// BUTTON.addEventListener("click" , grabHeader)
+// BUTTON.addEventListener("click" , grabText);
 // BUTTON.addEventListener("click" , checkEmptyField);
 
 // function joint(a){var b;return b=a[a.length-1],a.pop(),a=a.length>1?joint(a):a[0],function(){b.apply(new a)}}
@@ -56,7 +56,7 @@ function grabText(){
 function checkEmptyField(){
     const noteHeader = HEADERINPUT.value;
     const noteInputs = GETTEXT.value;
-    if (noteHeader === "" && noteHeader === " "  && noteInputs === "" && noteInputs === " " ){
+    if (noteHeader == "" && " "  && noteInputs == "" &&  " " ){
         console.log("Hi");
     }else{
         console.log("J");
