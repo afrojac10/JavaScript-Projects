@@ -8,15 +8,12 @@ const   HEADERINPUT = document.querySelector("#header");
 
 BUTTON.addEventListener("click" , () =>{
     checkEmptyField();
-    // grabHeader(); 
-    // grabText();
+    
 })
 
 
 function grabHeader(){
     var noteHeader = HEADERINPUT.value;
-    // if (noteHeader !== "" &&  " " ){
-    // if (logic == true ){
         var containerOfHeader = document.createElement("h3");
         var headerText = document.createTextNode(noteHeader);
         containerOfHeader.appendChild(headerText);
@@ -34,8 +31,6 @@ function grabHeader(){
 function grabText(){
     
     var noteInputs = GETTEXT.value;
-    // if (noteInputs !== "" && " " ){
-        // if (logic == true ){
         var containerOfText = document.createElement("li");
         var textNotesInputs = document.createTextNode(noteInputs);
         containerOfText.appendChild(textNotesInputs);
@@ -55,9 +50,9 @@ function checkEmptyField(){
     const noteHeader = HEADERINPUT.value;
     const noteInputs = GETTEXT.value;
     if (noteHeader !== "" && " "  && noteInputs !== "" &&  " " ){
-        // console.log("Hi");
         grabHeader();
         grabText();
+        errMessageIfFieldEmpty();
 
     }else{
         console.log("Please fill In!");
@@ -73,11 +68,26 @@ function checkEmptyField(){
 
 }
 
-var logic = checkEmptyField;
 
-// logic();
+function errMessageIfFieldEmpty() {
+    const noteHeader = HEADERINPUT.value;
+    const noteInputs = GETTEXT.value;
+    // Return Note and Header Field To Default Style
+    if (noteHeader == "" && " "  && noteInputs == "" &&  " " ){
+        GETTEXT.placeholder = "Enter Your Notes Here";
+        //  Return Header Field Default Style
+        HEADERINPUT.placeholder = "Enter Note Heading";
+        HEADERINPUT.classList.add('inputPlaceHolderSettings');
+        
+        // Return Text Field Default Style
+        GETTEXT.classList.add('inputPlaceHolderSettings');
+        GETTEXT.style.borderColor = "grey";
 
-// checkEmptyField();
+    }else{
+        console.log(null);
+    }
+
+}
 
 
 

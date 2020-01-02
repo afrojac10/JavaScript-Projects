@@ -98,14 +98,24 @@ input{
     border-radius: 8px;
 }
 
-::-webkit-input-placeholder{
+/* ::-webkit-input-placeholder{
     color: wheat;
+    font-weight: bold;
+} */
+
+::placeholder{
+    color: wheat;
+    font-weight: bold;
 }
 
-.placeHolderColorChange::-webkit-input-placeholder{
+/* .inputPlaceHolderSettings::-webkit-input-placeholder{
+
+} */
+
+/* .placeHolderColorChange::-webkit-input-placeholder{
     color: wheat;
     font-weight: bolder;
-}
+} */
 
 h3{
     /* text-align: center; */
