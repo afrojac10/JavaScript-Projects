@@ -8,68 +8,76 @@ const   HEADERINPUT = document.querySelector("#header");
 
 BUTTON.addEventListener("click" , () =>{
     checkEmptyField();
-    grabHeader(); 
-    grabText();
+    // grabHeader(); 
+    // grabText();
 })
 
-let b = 5;
-let a =7;
 
 function grabHeader(){
     var noteHeader = HEADERINPUT.value;
-    if (noteHeader !== "" &&  " " ){
+    // if (noteHeader !== "" &&  " " ){
+    // if (logic == true ){
         var containerOfHeader = document.createElement("h3");
         var headerText = document.createTextNode(noteHeader);
         containerOfHeader.appendChild(headerText);
         TEXTCONTAINER.appendChild(containerOfHeader);
         HEADERINPUT.value = null;
 
-    }else{
-        console.log("Please fill In!");
-        HEADERINPUT.placeholder = "Fill In A Value";
-        HEADERINPUT.classList.add('placeHolderColorChange');
-    }
+    // }else{
+    //     console.log("Please fill In!");
+    //     HEADERINPUT.placeholder = "Fill In A Value";
+    //     HEADERINPUT.classList.add('placeHolderColorChange');
+    // }
     
 }
 
 function grabText(){
     
     var noteInputs = GETTEXT.value;
-    if (noteInputs !== "" && " " ){
+    // if (noteInputs !== "" && " " ){
+        // if (logic == true ){
         var containerOfText = document.createElement("li");
         var textNotesInputs = document.createTextNode(noteInputs);
         containerOfText.appendChild(textNotesInputs);
         TEXTCONTAINER.appendChild(containerOfText);
         GETTEXT.value = null;
         
-    }else{
-        console.log("Please fill In!");
-        GETTEXT.style.borderColor = "crimson";
-        GETTEXT.placeholder = "Fill In A Value";
-        // GETTEXT.classList.add('placeHolderColorChange');
-    }
+    // }else{
+    //     console.log("Please fill In!");
+    //     GETTEXT.style.borderColor = "crimson";
+    //     GETTEXT.placeholder = "Fill In A Value";
+    //     GETTEXT.classList.add('placeHolderColorChange');
+    // }
 
 }
 
 function checkEmptyField(){
     const noteHeader = HEADERINPUT.value;
     const noteInputs = GETTEXT.value;
-    if (noteHeader == "" && " "  && noteInputs == "" &&  " " ){
+    if (noteHeader !== "" && " "  && noteInputs !== "" &&  " " ){
         // console.log("Hi");
         grabHeader();
         grabText();
 
     }else{
+        console.log("Please fill In!");
+        GETTEXT.style.borderColor = "crimson";
+        GETTEXT.placeholder = "Fill In A Value";
+        GETTEXT.classList.add('placeHolderColorChange');
+
+        console.log("Please fill In!");
+        HEADERINPUT.placeholder = "Fill In A Value";
+        HEADERINPUT.classList.add('placeHolderColorChange');
         console.log("J");
     }
 
 }
 
-let logic = checkEmptyField;
+var logic = checkEmptyField;
 
-logic();
+// logic();
 
-checkEmptyField();
+// checkEmptyField();
 
 
 
