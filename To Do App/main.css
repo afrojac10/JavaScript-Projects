@@ -98,24 +98,10 @@ input{
     border-radius: 8px;
 }
 
-/* ::-webkit-input-placeholder{
-    color: wheat;
-    font-weight: bold;
-} */
-
 ::placeholder{
     color: wheat;
     font-weight: bold;
 }
-
-/* .inputPlaceHolderSettings::-webkit-input-placeholder{
-
-} */
-
-/* .placeHolderColorChange::-webkit-input-placeholder{
-    color: wheat;
-    font-weight: bolder;
-} */
 
 h3{
     /* text-align: center; */

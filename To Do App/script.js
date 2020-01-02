@@ -7,69 +7,50 @@ const   HEADER = document.querySelector(".addedText");
 const   HEADERINPUT = document.querySelector("#header");
 
 BUTTON.addEventListener("click" , () =>{
-    checkEmptyField();
+    checkEmptyField(); 
     
 })
 
 
 function grabHeader(){
+    // Get Header From Field Create New Element And Append To DOM
     var noteHeader = HEADERINPUT.value;
         var containerOfHeader = document.createElement("h3");
         var headerText = document.createTextNode(noteHeader);
         containerOfHeader.appendChild(headerText);
         TEXTCONTAINER.appendChild(containerOfHeader);
         HEADERINPUT.value = null;
-
-    // }else{
-    //     console.log("Please fill In!");
-    //     HEADERINPUT.placeholder = "Fill In A Value";
-    //     HEADERINPUT.classList.add('placeHolderColorChange');
-    // }
     
 }
 
 function grabText(){
-    
+    // Get Notes From Field Create New Element And Append To DOM
     var noteInputs = GETTEXT.value;
-        var containerOfText = document.createElement("li");
-        var textNotesInputs = document.createTextNode(noteInputs);
-        containerOfText.appendChild(textNotesInputs);
-        TEXTCONTAINER.appendChild(containerOfText);
-        GETTEXT.value = null;
-        
-    // }else{
-    //     console.log("Please fill In!");
-    //     GETTEXT.style.borderColor = "crimson";
-    //     GETTEXT.placeholder = "Fill In A Value";
-    //     GETTEXT.classList.add('placeHolderColorChange');
-    // }
+    var containerOfText = document.createElement("li");
+    var textNotesInputs = document.createTextNode(noteInputs);
+    containerOfText.appendChild(textNotesInputs);
+    TEXTCONTAINER.appendChild(containerOfText);
+    GETTEXT.value = null;
 
 }
 
 function checkEmptyField(){
+    // Check If Field Is Empty Or Contain Space
     const noteHeader = HEADERINPUT.value;
     const noteInputs = GETTEXT.value;
     if (noteHeader !== "" && " "  && noteInputs !== "" &&  " " ){
         grabHeader();
         grabText();
-        errMessageIfFieldEmpty();
+        styleRestoreDefault();
 
     }else{
-        console.log("Please fill In!");
-        GETTEXT.style.borderColor = "crimson";
-        GETTEXT.placeholder = "Fill In A Value";
-        GETTEXT.classList.add('placeHolderColorChange');
-
-        console.log("Please fill In!");
-        HEADERINPUT.placeholder = "Fill In A Value";
-        HEADERINPUT.classList.add('placeHolderColorChange');
-        console.log("J");
+        errMessageIfFieldEmpty();
     }
 
 }
 
 
-function errMessageIfFieldEmpty() {
+function styleRestoreDefault() {
     const noteHeader = HEADERINPUT.value;
     const noteInputs = GETTEXT.value;
     // Return Note and Header Field To Default Style
@@ -86,6 +67,19 @@ function errMessageIfFieldEmpty() {
     }else{
         console.log(null);
     }
+
+}
+
+function errMessageIfFieldEmpty(){
+    // Error message and warning when field empty
+    console.log("Please fill In!");
+    // Header Error Message
+    HEADERINPUT.placeholder = "Fill In A Value";
+    HEADERINPUT.classList.add('placeHolderColorChange');
+    //  Notes Error Message
+    GETTEXT.style.borderColor = "crimson";
+    GETTEXT.placeholder = "Fill In A Value";
+    GETTEXT.classList.add('placeHolderColorChange');
 
 }
 
