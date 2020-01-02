@@ -6,18 +6,18 @@ const BUTTON = document.querySelector(".addNotes");
 const   HEADER = document.querySelector(".addedText");
 const   HEADERINPUT = document.querySelector("#header");
 
-BUTTON.addEventListener("click" , checkEmptyField , grabHeader ,grabText );
-// BUTTON.addEventListener("click" , grabHeader)
-// BUTTON.addEventListener("click" , grabText);
-// BUTTON.addEventListener("click" , checkEmptyField);
+BUTTON.addEventListener("click" , () =>{
+    checkEmptyField();
+    grabHeader(); 
+    grabText();
+})
 
-// function joint(a){var b;return b=a[a.length-1],a.pop(),a=a.length>1?joint(a):a[0],function(){b.apply(new a)}}
-
-
+let b = 5;
+let a =7;
 
 function grabHeader(){
     var noteHeader = HEADERINPUT.value;
-    if (noteHeader !== "" && noteHeader !== " " ){
+    if (noteHeader !== "" &&  " " ){
         var containerOfHeader = document.createElement("h3");
         var headerText = document.createTextNode(noteHeader);
         containerOfHeader.appendChild(headerText);
@@ -32,12 +32,10 @@ function grabHeader(){
     
 }
 
-
-
 function grabText(){
     
     var noteInputs = GETTEXT.value;
-    if (noteInputs !== "" && noteInputs !== " " ){
+    if (noteInputs !== "" && " " ){
         var containerOfText = document.createElement("li");
         var textNotesInputs = document.createTextNode(noteInputs);
         containerOfText.appendChild(textNotesInputs);
@@ -57,17 +55,22 @@ function checkEmptyField(){
     const noteHeader = HEADERINPUT.value;
     const noteInputs = GETTEXT.value;
     if (noteHeader == "" && " "  && noteInputs == "" &&  " " ){
-        console.log("Hi");
+        // console.log("Hi");
+        grabHeader();
+        grabText();
+
     }else{
         console.log("J");
     }
 
 }
 
-checkEmptyField();
-// grabText = joint([grabText, grabHeader]);
+let logic = checkEmptyField;
 
-// console.log(BUTTON);
+logic();
+
+checkEmptyField();
+
 
 
 
