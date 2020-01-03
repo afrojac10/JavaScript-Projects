@@ -41,7 +41,6 @@ function checkEmptyField(){
     let b = 3;
     if (noteHeader !== ""   && noteInputs !== "" ){
         checkSpace()
-        console.log("Hello!");
     }
     
     else{
@@ -67,8 +66,6 @@ var checkSpace = function() {
         GETTEXT.value = ""; 
     }
 } 
-
-// checkSpace();
 
 
 function styleRestoreDefault() {
