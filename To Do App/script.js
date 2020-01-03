@@ -40,12 +40,8 @@ function checkEmptyField(){
     let a = 5;
     let b = 3;
     if (noteHeader !== ""   && noteInputs !== "" ){
-        // grabHeader();
-        // grabText();
-        // styleRestoreDefault();
         checkSpace()
-    // }if(a > b){
-    //     console.log("Hello!");
+        console.log("Hello!");
     }
     
     else{
@@ -66,9 +62,6 @@ var checkSpace = function() {
     }else{
         console.log("Not working");
         errMessageIfFieldEmpty();
-
-        noteHeader.trim();
-        noteInputs.trim();
 
         HEADERINPUT.value = "";
         GETTEXT.value = ""; 
