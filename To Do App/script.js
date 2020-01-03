@@ -40,11 +40,12 @@ function checkEmptyField(){
     let a = 5;
     let b = 3;
     if (noteHeader !== ""   && noteInputs !== "" ){
-        grabHeader();
-        grabText();
-        styleRestoreDefault();
-    }if(b > a){
-        console.log("Hello!");
+        // grabHeader();
+        // grabText();
+        // styleRestoreDefault();
+        checkSpace()
+    // }if(a > b){
+    //     console.log("Hello!");
     }
     
     else{
@@ -52,6 +53,29 @@ function checkEmptyField(){
     }
 
 }
+
+var checkSpace = function() {
+    var noteHeader = HEADERINPUT.value;
+    var noteInputs = GETTEXT.value; 
+    
+    if (noteHeader.trim() !== "" && noteInputs.trim() !== "" ){
+        // console.log("Aye");
+        grabHeader();
+        grabText();
+        styleRestoreDefault();
+    }else{
+        console.log("Not working");
+        errMessageIfFieldEmpty();
+
+        noteHeader.trim();
+        noteInputs.trim();
+
+        HEADERINPUT.value = "";
+        GETTEXT.value = ""; 
+    }
+} 
+
+// checkSpace();
 
 
 function styleRestoreDefault() {
