@@ -13,30 +13,32 @@ BUTTON.addEventListener("click" , () =>{
 
 function grabHeader(){
     // Get Title From Field Create New Element And Append To DOM
-    var noteHeader = HEADERINPUT.value;
-        var containerOfHeader = document.createElement("h3");
-        var headerText = document.createTextNode(noteHeader);
-        containerOfHeader.appendChild(headerText);
-        TEXTCONTAINER.appendChild(containerOfHeader);
-        HEADERINPUT.value = null;
+    let noteHeader = HEADERINPUT.value;
+    let containerOfHeader = document.createElement("h3");
+    let headerText = document.createTextNode(noteHeader);
+    containerOfHeader.appendChild(headerText);
+    TEXTCONTAINER.appendChild(containerOfHeader);
+    HEADERINPUT.value = null;
     
 }
 
 function grabText(){
     // Get Notes From Field Create New Element And Append To DOM
-    var noteInputs = GETTEXT.value;
-    var containerOfText = document.createElement("li");
-    var textNotesInputs = document.createTextNode(noteInputs);
+    let noteInputs = GETTEXT.value;
+    let containerOfText = document.createElement("li");
+    let textNotesInputs = document.createTextNode(noteInputs);
     containerOfText.appendChild(textNotesInputs);
     TEXTCONTAINER.appendChild(containerOfText);
     GETTEXT.value = null;
 
 }
-
+'use strict'
 function checkEmptyField(){
     // Check If Field Is Empty Or Contain Space
     const noteHeader = HEADERINPUT.value;
     const noteInputs = GETTEXT.value;
+    let a = 5;
+    let b = 3;
     if (noteHeader !== "" && " "  && noteInputs !== "" &&  " " ){
         grabHeader();
         grabText();
