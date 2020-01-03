@@ -39,12 +39,15 @@ function checkEmptyField(){
     const noteInputs = GETTEXT.value;
     let a = 5;
     let b = 3;
-    if (noteHeader !== "" && " "  && noteInputs !== "" &&  " " ){
+    if (noteHeader !== ""   && noteInputs !== "" ){
         grabHeader();
         grabText();
         styleRestoreDefault();
-
-    }else{
+    }if(b > a){
+        console.log("Hello!");
+    }
+    
+    else{
         errMessageIfFieldEmpty();
     }
 
