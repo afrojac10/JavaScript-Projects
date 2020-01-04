@@ -37,8 +37,7 @@ function checkEmptyField(){
     // Check If Field Is Empty Or Contain Space
     const noteHeader = HEADERINPUT.value;
     const noteInputs = GETTEXT.value;
-    let a = 5;
-    let b = 3;
+
     if (noteHeader !== ""   && noteInputs !== "" ){
         checkSpace()
     }
@@ -54,7 +53,6 @@ var checkSpace = function() {
     var noteInputs = GETTEXT.value; 
     
     if (noteHeader.trim() !== "" && noteInputs.trim() !== "" ){
-        // console.log("Aye");
         grabHeader();
         grabText();
         styleRestoreDefault();
