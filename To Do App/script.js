@@ -70,7 +70,7 @@ function styleRestoreDefault() {
     const noteHeader = HEADERINPUT.value;
     const noteInputs = GETTEXT.value;
     // Return Note and Title Field To Default Style
-    if (noteHeader == ""  && noteInputs == "" &&  " " ){
+    if (noteHeader == ""  && noteInputs == "" ){
         GETTEXT.placeholder = "Enter Your Notes Here";
         //  Return Title Field Default Style
         HEADERINPUT.placeholder = "Enter Note Heading";
