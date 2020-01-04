@@ -102,10 +102,8 @@ input{
 }
 
 h3{
-    /* text-align: center; */
     text-transform: capitalize; 
     font-family: 'Girassol', cursive;
-    /* text-decoration: underline; */
     border-bottom: 3px solid teal;
     padding: 10px 30px;
     margin: 10px;
