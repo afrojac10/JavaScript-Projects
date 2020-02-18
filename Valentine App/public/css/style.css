@@ -1,0 +1,197 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+body{
+    /* background: url("../../images/bg-image/2741057.jpg");
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position-x: center;
+    background-color: #b8c6db; */
+    background-color: #f5f4f2;
+background-image: linear-gradient(315deg, #f5f4f2 0%, #ff4081 74%);
+}
+
+h1{
+    font-size: 40px;
+}
+
+p{
+    font-size: 28px;
+    margin: 10px 0;
+    color: whitesmoke;
+}
+
+.container_1{
+    padding: 10px;
+    background-color: #e7008a;
+}
+
+.content{
+    flex-direction: row;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    margin: 20px;
+    width: 90%;
+}
+
+.contentImage{
+    width: 300px;
+   justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.welcomeTextContainer{
+    border: 5px solid black;
+    padding : 29% 10%;
+    margin: 19% 12%;
+    border-radius: 20px 20px 0 0;
+    color: tomato;
+}
+
+.next{
+    position: relative;
+    padding: 10%;
+    margin: 8%;
+}
+
+.nextArrow{
+    background-color: red;
+}
+
+.nextImg{
+    width: 50px;
+    position: absolute;
+    left: 75%;
+    background-color: red;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.me{
+    width: 250px;
+    
+}
+
+.heroSection{
+    border: none;
+    padding: 30px;
+}
+
+/***********************   Media Querry     **************************/
+
+@media screen and (min-width : 1024px){
+    .content{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-content: flex-start;
+    }
+
+    .container{
+        flex-direction: row;
+        padding:30px 0;
+        margin: 4px;
+        width: 50% 0;
+        justify-content: space-between;
+    }
+
+    p{
+        font-size: 24px;
+    }
+
+    .heroSection{
+        padding : 150px;
+        margin: 10px;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .welcomeTextContainer{
+        padding :75px;
+        margin: 0;
+        border-radius: 20px 20px 0 0;
+        text-align: center;
+        color: tomato;
+    }
+
+    .container_1{
+        padding: 10px;
+        background-color: #e7008a;
+    }
+
+    .next{
+        padding: 10px;
+    }
+
+    .contentImage{
+        display: block;
+    }
+}
+
+/********************************* Sign Up Styles *********************************/
+
+form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+label{
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    
+}
+
+input[type = email],
+input[type = text],
+input[type = password]{
+    margin: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+}
+
+.signUpContainer{
+    background-color: rgba(255, 255, 255, 0.534);
+    padding: 50px;
+    margin: 10px;
+}
+
+.signIn{
+    font-size: 15px;
+    color: black;
+}
+
+.inputContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+a{
+    /* text-decoration: none; */
+    color: brown;
+}
+
+.quickSignIn{
+    color: #fff;
+}
+
+@media screen and (min-width : 1024px){
+    .inputContainer{
+        flex-direction: row;
+    }
+}
+

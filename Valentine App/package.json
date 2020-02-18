@@ -1,0 +1,15 @@
+{
+  "name": "valentine-app",
+  "version": "1.0.0",
+  "description": "Expression Of Love",
+  "main": "index.html",
+  "scripts": {
+    "start": "node server/app.js",
+    "dev": "nodemon server/app.js"
+  },
+  "author": "Blaise Njike",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
